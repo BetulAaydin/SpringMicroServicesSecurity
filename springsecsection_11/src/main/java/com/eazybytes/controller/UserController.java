@@ -1,6 +1,8 @@
 package com.eazybytes.controller;
 
 import com.eazybytes.constants.ApplicationConstants;
+import com.eazybytes.logging.Loggable;
+import com.eazybytes.logging.LoggableType;
 import com.eazybytes.model.Customer;
 import com.eazybytes.model.LoginRequestDTO;
 import com.eazybytes.model.LoginResponseDTO;
@@ -29,7 +31,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
-
+@Loggable(type = LoggableType.CONTROLLER)
 public class UserController {
 
     private final CustomerRepository customerRepository;
